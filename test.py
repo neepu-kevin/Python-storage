@@ -1,15 +1,9 @@
-import random
+def master_func(a, b, c=10, *args, **kwargs):
+    print(f"a: {a}")
+    print(f"b: {b}")
+    print(f"c: {c}")
+    print(f"args: {args}")
+    print(f"kwargs: {kwargs}")
 
-arr = [[random.randint(1,100) for i in range(5)] for j in range(5)]
-
-for i in range(len(arr)):
-    for j in range(len(arr[i])):
-        print(arr[i][j], end=' ')
-    print()
-
-arr.sort(key=lambda x: x[1])
-print('Sorted by second element:')
-for i in range(len(arr)):
-    for j in range(len(arr[i])):
-        print(arr[i][j], end=' ')
-    print()
+# 调用：
+master_func(1, 2, 3, 4, 5, 6, name="Tom", age=18)
